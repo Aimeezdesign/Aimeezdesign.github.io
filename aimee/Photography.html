@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <title>Aimee Zhao's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aimee Zhao's Portfolio">
+    <link href="css/style2.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=EB+Garamond&display=swap" rel="stylesheet">
+    </style>
+    <body>
+      <div class="searchbar">
+      <form>
+        <input type="text" name="search" placeholder="Search...">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class="logo">
+      <center><img src="logo.png" alt="logo" width="100" height=auto></center>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutMe.html">About Me</a></li>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Design.html">Design</a></li>
+        <li><a href="ContactMe.html">Contact Me</a></li>
+      </ul>
+    </nav>
+    <h1>My Photography Gallery</h1>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+
+      <img src="Photography/Images1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images2.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images3.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images4.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images5.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images6.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images7.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images8.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images9.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images10.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images11.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images12.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images13.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images14.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images15.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images16.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images17.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images18.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images19.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="Photography/Images20.jpg" style="width:100%">
+      </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span> 
+      <span class="dot" onclick="currentSlide(8)"></span> 
+      <span class="dot" onclick="currentSlide(9)"></span> 
+      <span class="dot" onclick="currentSlide(10)"></span> 
+      <span class="dot" onclick="currentSlide(11)"></span> 
+      <span class="dot" onclick="currentSlide(12)"></span>
+      <span class="dot" onclick="currentSlide(13)"></span> 
+      <span class="dot" onclick="currentSlide(14)"></span> 
+      <span class="dot" onclick="currentSlide(15)"></span>
+      <span class="dot" onclick="currentSlide(16)"></span>
+      <span class="dot" onclick="currentSlide(17)"></span>
+      <span class="dot" onclick="currentSlide(18)"></span> 
+      <span class="dot" onclick="currentSlide(19)"></span>  
+      <span class="dot" onclick="currentSlide(20)"></span>   
+    </div>
+    </body>
+    <footer>
+    &copy; 2023 Aimee Zhao's Portfolio
+    </footer>
+  </head>
+</html>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
